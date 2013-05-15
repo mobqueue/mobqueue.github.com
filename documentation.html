@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+	<title></title>
+	<script type="text/javascript">
+		$('#list_content a').live('click' , function(e){
+			var item = $(this);
+			var _href = item.attr('href');
+			$('html,body').animate({ 
+				scrollTop: $(_href).offset().top 
+			}, 'swing');
+			e.preventDefault();
+		});
+		$('.to_show_item').live('click' , function(){
+			$(this).next().toggle('slow');
+		});
+	</script>
+</head>
+<body>
+	<div class="center">
+		<h1>SOUND HTML site template</h1>
+		<h3>Table of Contents</h3>
+		<ol class="list_content">
+			<li><a href="#general_info">General information</a></li>
+			<li><a href="#file_structure">Template file structure</a></li>
+			<li><a href="#markup">Code Markup</a>
+            	<ul>
+                	<li><a href="#markup_main_menu">Main Menu markup</a></li>
+                	<li><a href="#markup_pages">Pages markup</a></li>
+                	<li><a href="#markup_contact">Contact page</a></li>
+                </ul>
+			</li>				
+			
+			<li><a href="#credits">Credits</a></li>		
+		</ol>
+		
+		<div class="item">
+			<h3 id="general_info">General information</h3>
+			<p>Sound is a creative template with unique one page design that fits best for resume, portfolio, creative personal presentation. Key features:</p>
+			<ul>
+				<li>Unique one-page layout</li>
+				<li>Responsive design</li>
+				<li>Fixed to top navigation</li>
+				<li>Bootstrap support</li>
+				<li>Retina screen ready</li>
+				<li>Contact form php files included</li>
+				<li>Cross browser support</li>
+			</ul>
+			
+			
+		</div>
+		<div class="item">
+			<h3 id="file_structure">Template file structure</h3>
+			<p>Sound template has following structure of the files:</p>
+			<b class="to_show_item" style="margin-bottom:20px;display:block">Show screenshot</b>
+			<div class="hidden_item">
+				<img src="screen/file_structure.png" alt=""/>
+			</div>
+			<br>
+						
+			<ul>
+				<li>
+					<dl><dt>Images</dt>
+						<dd>Directory for custom images. Backgrounds, feature section images should be placed in this directory.</dd>
+					</dl>
+				</li>
+				<li>
+					<dl><dt>Layout</dt>
+						<dd>Contains all scipts, css and images that are required</dd>
+					</dl>
+					<ul>
+						<li>
+							<dl><dt>Css</dt>
+								<dd>Contains styles of template:</dd>
+							</dl>
+							<ul>
+								<li>bootstrap.min.css</li>
+								<li>bootstrap-responsive.min.css</li>
+								<li>font-awesome.min.css (<a target="_blank" href="http://fortawesome.github.com/Font-Awesome/">font-based icons</a>)</li>
+								<li>style.css</li>
+							</ul>
+						</li>
+						<li>
+							<dl><dt>Fonts</dt>
+								<dd>Contains font-awesome files.</dd>
+							</dl>
+						</li>
+						<li>
+							<dl><dt>Img</dt>
+								<dd>Images for template layout</dd>
+							</dl>
+						</li>
+						<li>
+							<dl><dt>Js</dt>
+							</dl>
+							<ul>
+								<li>bootstrap.min.js</li>
+								<li>functions.js - contains all template functions that are called with script.js</li>
+								<li>jquery.js</li>
+								<li>script.js - This file is basic for template. Contains all function calls.</li>
+							</ul>
+						</li>
+						<li>
+							<dl><dt>Plugins</dt>
+								<dd>Template uses several plugins:</dd>
+							</dl>
+							<ul>
+								<li>ajaxform - contact page ajax form</li>
+								<li>flexslider - template is ready to include this slider</li>
+								<li>mousewheel - gets crossbrowser wheel events</li>
+								<li>prettyphoto - plugin for lightbox effect. Ready to be used in template.  <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">Plugin homepage</a></li>
+								<li>scrollto - page scroll animation</li>
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+				<li>
+					<dl><dt>Mail</dt>
+						<dd>This directory contains "contact_form.php" script that sends mail from server. Edit this file to define mail adress where message should me sent. This script requires PHP to be installed on your server.</dd>
+					</dl>
+				</li>
+				<li>
+					<dl><dt>index.html</dt>
+						<dd>Sound is one-page template, so it has only one html file.</dd>
+					</dl>
+				</li>
+			</ul>
+			
+<!-- ======================================= -->
+		</div>
+		
+		
+		<div class="item">
+			<h3 id="markup">Markup</h3>
+			<h4>General Markup</h4>
+			<p>Sound has several markup nodes: Heading, Navigation, 5 pages, Footer:</p>
+			<b class="to_show_item" style="margin-bottom:20px;display:block">Show screenshot</b>
+			<div class="hidden_item">
+				<img src="screen/general_markup.png" alt=""/>
+			</div>
+            
+            <h4 id="markup_main_menu">Main Menu markup</h4>
+            <p>
+            	Menu is based on bootstrap menu markup. It has two variant: full variant (for big screens and tablets) and minified (for smartphones). And two states: general and fixed. When screen is scrolled to menu position - it becomes fixed to top.<br />
+            </p>
+            <p>
+				Menu contains 2 logos: <br />
+				<ul>
+					<li>Main logo. (Line 82) Max height 64px</li>
+					<li>And logo for mobile devices (Line 78) Max height 50px</li>
+				</ul>
+			<br />
+            </p>
+            
+            <h4 id="markup_pages">Pages markup</h4>
+            <p>Each page should have ID (like "page1") and classname "page-item-class". Pages structure is different depending on the content.<br />
+			So if you need one more page - copy code of the page that has the most suitable layout.<br />
+			You can apply "scroll_to" classname to links - this will create animated transitions inside you template.
+            </p>
+           
+            <h4 id="markup_contact">Contact page</h4>
+            <p>Contact form uses ajax and contact_form.php file to send mails withount CMS. "Newsletter Sign Up" sends data separately from contact form. <br />
+			To set Google map just replace it with your map code in HTML format.
+            </p>
+           
+			
+		</div>
+		
+
+		
+		<div class="item">
+			<h3 id="credits">Sources and Credits</h3>
+		
+			<p>The following products and providers made this theme functional and flexible. A great thanks to all of them:</p>
+			<ul>
+				<li><a title="jQuery" href="http://jquery.com/">jQuery</a></li>
+				<li><a title="jQuery" href="http://malsup.com/jquery/form/">jQuery Form Plugin</a></li>
+				<li><a title="jQuery" href="http://www.woothemes.com/flexslider/">jQuery FlexSlider</a></li>
+				<li><a title="jQuery" href="http://brandonaaron.net">jQuery.mousewheel</a></li>
+				<li><a title="jQuery" href="http://www.no-margin-for-errors.com">prettyPhoto</a></li>
+				<li><a title="jQuery" href="http://flesler.blogspot.com">ScrollTo</a></li>
+				
+			</ul>
+		</div>
+
+	</div>
+</body>
+</html>
