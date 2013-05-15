@@ -9,3 +9,18 @@ $('h5 span').live('click' , function(){
 		item.text('hide');
 	}
 });
+
+$(function() {
+  $('#contact_form').submit(function(event) {
+    event.preventDefault();
+    var this_form = $(this);
+    $.ajax({
+      type: 'post',
+      data: this_form.serialize(),
+      url: 'https://api.perfec.tt/public/contactus',
+      success: function(res) {
+        alert('Your message has been sent!');
+      }
+    });
+  });
+});
