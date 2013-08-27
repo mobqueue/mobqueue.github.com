@@ -836,27 +836,27 @@ h4 i{
 #page2 h1, .page2 h1{
 
 }
-#page3{
+#pricing{
 	background-image:url("../../images/pricing_bg.jpg");
 	background-color:#ff6600;
 	background-position: center top;
 }
-#page3 h1, #page3 h2, #page3 h3, #page3 h4, #page3 h5, #page3 h6, #page3 h1 small {
+#pricing h1, #pricing h2, #pricing h3, #pricing h4, #pricing h5, #pricing h6, #pricing h1 small {
 
 }
-#page3 a{
+#pricing a{
 	
 }
-#page4{
+#contact_us{
 	background-color:#f5f1e5;
 }
-#page4 h1, #page4 h2, #page4 h3, #page4 h4, #page4 h5, #page4 h6, #page4 h1 small {
+#contact_us h1, #contact_us h2, #contact_us h3, #contact_us h4, #contact_us h5, #contact_us h6, #contact_us h1 small {
 	/*color:#ffffff;*/
 }
-#page5{
+#company{
 	background-color:#f5f1e5;
 }
-#page5 h1, #page5 h2, #page5 h3, #page5 h4, #page5 h5, #page5 h6, #page5 h1 small {
+#company h1, #company h2, #company h3, #company h4, #company h5, #company h6, #company h1 small {
 	/*color:#ffffff;*/
 }
 @media (max-width: 1370px) {
@@ -1031,8 +1031,8 @@ h4 i{
 		margin-left: 10px;
 	}
 	
-	#page1 img,
-	#page1 .the_btn,
+	#features img,
+	#features .the_btn,
 	#page2 img,
 	#page2 .the_btn
 	{margin-left:20px;}
@@ -1116,4 +1116,4 @@ h4 i{
 	color: #bebebe !important;
 	border:	#bebebe !important;
 	cursor: default;
-}
+}company
